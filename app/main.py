@@ -1,11 +1,11 @@
 class Person:
-    people = dict()
     def __init__(self, name, age):
         self.name = name
         self.age = age
         Person.people[self.name] = self
 
 def create_person_list(people: list) -> list:
+    people = dict()
     result = [Person(i["name"], i["age"]) for i in people]
     for i in people:
         if "wife" in i and i["wife"] is not None:
